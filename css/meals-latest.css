@@ -1,0 +1,716 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+
+/* 変数 */
+:root{
+    --page-ground: #ccc;
+    --component-ground: #f0f0f0;
+    --green: #48D287;
+    --blue: #16a0ef;
+    scroll-behavior: smooth;
+}
+
+/* reset CSS */
+body{
+    padding: 0;
+    margin: 0;
+    background: var(--page-ground);
+    min-width: 375px;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+h1, h2, h3, p, a{
+    font-size: 16px;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    color: #000;
+    text-decoration: none;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+input::placeholder{
+    color: var(--page-ground);
+}
+/* style */
+
+.primary-header{
+    width: 100%;
+    height: 88px;
+    display: flex;
+    background: var(--green);
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+.primary-header div{
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.logo h1{
+    font-size: 20px;
+    color:#fff;
+    margin-left: 24px;
+    padding: 2px;
+    line-height: 28px;
+    font-family: 'Kosugi Maru', sans-serif;
+    white-space: pre-line;
+    text-align: center;
+    border: 1px solid #fff;
+    width: 100px;
+    transition: opacity .2s;
+
+}
+
+.logo:hover h1{
+    opacity: 0.7;
+}
+
+.page-title h1{
+    font-size: 28px;
+    font-weight: bold;
+    color:#fff;
+    text-align: center;
+}
+
+.header-nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-nav .meals-latest .st0{
+    fill:#fff;
+    transition: all 0.2s;
+}
+
+.header-nav .meals-latest:hover .st0{
+    fill:#16a0ef;
+}
+
+.header-nav .meals-latest.is-active .st0{
+    fill:#16a0ef;
+}
+
+.header-nav .calender i{
+    display: flex;
+    justify-content: flex-end;
+    color: #fff;
+    font-size: 40px;
+}
+
+.header-nav .calender i{
+    margin: 0 24px;
+    transition: color 0.2s;
+}
+
+.header-nav .calender i:hover{
+    color: #16a0ef;
+}
+
+.header-nav .calender.is-active i{
+    color: #16a0ef;
+}
+
+/* ------------------------ */
+
+.progress-bar-container{
+    position: fixed;
+    margin-top: 88px;
+    width: 100%;
+    height: 88px;
+    background: #fff;
+}
+
+.progress-bar{
+    display: flex;
+    justify-content: space-around;
+}
+.progress-bar_item{
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: 0 8px;
+}
+
+.progress-bar_item div{
+    content: "";
+    width: 100%;
+    height: 16px;
+    background: #ddd;
+    border-radius: 8px;
+    margin-top: 16px;
+}
+
+.progress-bar_item h2{
+    padding: 8px 0 16px 0;
+    text-align: center;
+}
+
+.top-magin{
+    content: "";
+    height: 88px;
+}
+
+/* --------------------------- */
+
+.main-contents-container{
+    padding: 24px;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.meal-togle{
+    width: 240px;
+    height: 40px;
+    border-radius: 20px;
+    background: var(--component-ground);
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.meal-togle a{
+    line-height: 24px;
+    font-size: 20px;
+    transition: opacity 0.2s;
+}
+
+.meal-togle a:hover{
+    opacity: 0.7;
+}
+
+.meal-togle a.active{
+    color: var(--green);
+    font-weight: bold;
+}
+
+.meal-togle div{
+    content: "";
+    width: 1px;
+    height: 32px;
+    background: var(--page-ground);
+    margin: 0 8px;
+}
+
+.top{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.top-left{
+    width: calc(60% - 9.6px);
+    padding: 16px;
+    border-radius: 16px;
+    background: var(--component-ground);
+    box-sizing: border-box;
+
+}
+
+.section-title{
+    line-height: 24px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.calorie-data{
+    line-height: 32px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 4px;
+}
+
+.bar-container{
+    background-color: var(--component-ground);
+    box-shadow: inset 3px 3px 6px #cccccc,
+                inset -3px -3px 6px #ffffff;
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.bar-item{
+    background-color: #48D287;
+    width: 50%;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.nutrition{
+    display: flex;
+    margin-top: 48px;
+}
+
+.nutrient{
+    flex-basis: 0;
+    flex-grow: 3;
+}
+
+.nutrition-chart{
+    flex-basis: 0;
+    flex-grow: 2;
+    margin-left: 24px;
+}
+
+.nutrient-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:16px;
+    margin-top: 16px;
+}
+
+.nutrition_item{
+    width: calc(50% - 8px);
+}
+
+.nutrition_item > h2{
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.nutrition_item > h3{
+    text-align: right;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.bar-container_mediam{
+    background-color: var(--component-ground);
+    box-shadow: inset 3px 3px 6px #cccccc,
+                inset -3px -3px 6px #ffffff;
+    width: 100%;
+    height: 16px;
+    border-radius: 8px;
+}
+
+.bar-item_mediam{
+    background-color: #48D287;
+    width: 50%;
+    height: 16px;
+    border-radius: 8px;
+}
+
+.nutrition-chart__contents{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+/* ------------------------------ */
+
+.top-right{
+    width: calc(40% - 6.4px);
+    margin-left: 16px;
+}
+
+.recommendation{
+    background: var(--component-ground);
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.recommendation__menu{
+    margin-top: 12px;
+    line-height: 24px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.gray-bar{
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+    background: #e5e5e5;
+}
+
+.recommendation__contents{
+    margin-top: 8px;
+    display: flex;
+}
+
+.recommendation__img{
+    width: calc(40% - 6.4px);
+}
+
+.recommendation__img > img{
+    width: 100%;
+    object-fit: cover;
+}
+
+.recommendation__nutrition{
+    width: calc(60% - 9.6px);
+    margin-left: 16px;
+
+}
+
+.recommendation__nutrient-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.recommendation__nutrient-container > li{
+    width: calc(50% - 8px);
+    padding-bottom: 8px;
+}
+
+.recommendation__nutrient-container > li h2{
+    font-size: 14px;
+    line-height: 16px;
+}
+
+.recommendation__nutrient-container > li h3{
+    font-size: 16px;
+    line-height: 16px;
+    font-weight: bold;
+    text-align: right;
+}
+
+.recommendation__nutrient-container > li:first-child{
+    width: 100%;
+}
+
+.margin-left-16px{
+    margin-left: 16px;
+}
+
+.recommendation__nutrient-container > li.not__padding-bottom-8px{
+    padding-bottom: 0px;
+}
+
+
+
+.food-costs{
+    margin-top: 16px;
+    background: var(--component-ground);   
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.food-costs h2{
+    margin-top: 24px;
+    text-align: right;
+    line-height: 32px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+/* ----------------------------- */
+
+.meals{
+    margin-top: 16px;
+    background: var(--component-ground); 
+    padding: 16px;
+    border-radius: 16px;  
+}
+
+.meals-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-edit{
+    color: var(--blue);
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.section-edit:hover{
+    text-decoration: underline 1px solid var(--blue);
+}
+
+/* ------------------------------------- */
+
+.meals-contents{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.meal{
+    margin-top: 8px;
+    width: calc(25% - 12px);
+    /* border: 1px solid #000;
+    box-sizing: border-box; */
+    /* padding: 16px; */
+    border-radius: 16px;
+    box-shadow: inset 3px 3px 6px #cccccc,
+    inset -3px -3px 6px #ffffff;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.meals-contents > .meal + .meal{
+    margin-left: 16px;
+}
+
+.meal-header{
+    padding: 16px 16px 8px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--page-ground);
+}
+
+.meal-header__inner{
+    display: flex;
+}
+
+.meal-header img{
+    width: 24px;
+    height: 24px;
+}
+
+.meal-header h2{
+    line-height: 24px;
+    font-size: 20px;
+    padding-left: 8px;
+}
+
+.meal-header p{
+    line-height: 24px;
+    font-size: 20px;
+    color: #aaa;
+}
+
+.meal-img{
+    /* width: calc(100% + 32px);
+    height: 160px;
+    margin: 0 -16px; */
+    width: 100%;
+    height: 188px;
+    margin: 0 auto;
+}
+
+.meal-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.meal-main{
+    background: rgba(72, 210, 135, 0.3);
+    border-bottom: 1px solid #48D287;
+}
+
+.meal-name h2{
+    text-align: center;
+    /* border-top: 1px solid #48D287;
+    border-bottom: 1px solid #48D287; */
+    /* font-weight: bold; */
+    font-size: 16px;
+    padding: 8px 0; 
+    font-family: 'Kosugi Maru', sans-serif;
+}
+
+.meal-info{
+    display: flex;
+    justify-content: space-around;
+    padding: 2px 0 6px 0;
+}
+
+.meal-info h3{
+    padding: 2px 8px;
+    border: 1px solid rgba(72, 210, 135, 1);
+    border-radius: 14px;
+    font-size: 14px;
+    background: var(--component-ground);
+    color:  rgba(72, 210, 135, 1);
+
+}
+
+.meal-detail{
+    /* border-top: 1px solid #000; */
+    padding: 8px 16px 16px;
+    background: rgba(72, 210, 135, 0.1);
+}
+
+.meal-detail li{
+    display: flex;
+    justify-content: space-between;
+}
+
+.meal-detail li + li{
+    margin-top: 8px;
+}
+
+.meal-detail li p+p{
+    line-height: 24px;
+    font-size: 14px;
+    text-align: right;
+}
+
+.meal-detail li p{
+    line-height: 24px;
+    font-size: 14px;
+}
+
+/* ------------------------------------ */
+
+.schedule{
+    margin-top: 16px;
+    background: var(--component-ground); 
+    padding: 16px;
+    border-radius: 16px;  
+}
+
+.schedule-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.schedule-contents{
+    margin-top: 8px;
+    padding: 16px;
+    border-radius: 16px;
+    box-shadow: inset 3px 3px 6px #cccccc,
+    inset -3px -3px 6px #ffffff;
+}
+
+/* ------------------------------*/
+
+#to-top{
+    position: fixed;
+    bottom: 100px;
+    right: 12px;
+    z-index: 5;
+    transition: transform .5s;
+}
+
+#to-top a{
+    content: "";
+    width: 64px;
+    height: 64px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#to-top i{
+    font-size: 24px;
+    color: #48D287;
+}
+
+#to-top:hover{
+    transform: translateY(-8px)
+}
+
+/* ---------------------------- */
+
+.global-nav{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 88px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(6px);
+}
+
+.global-nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 88px;
+}
+
+
+.global-nav li{
+    width: 200px;
+    transition: transform 0.3s;
+}
+
+.global-nav i{
+    font-size: 40px;
+    text-align: center;
+    display: block;
+}
+
+.global-nav p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.global-nav li:hover{
+    transform: scale(0.9);
+}
+
+.global-nav li:nth-child(3) i,
+.global-nav li:nth-child(3) p{
+    color: #16a0ef;
+}
+
+
+@media screen and (max-width:768px){
+
+    .page-title h1{
+        font-size: 20px;
+    }
+
+    /* ---------------- */
+    .top{
+        display: block;
+    }
+
+    .top-left, .top-right{
+        width: 100%;
+    }
+
+    .top-right{
+        margin-left: 0px;
+        margin-top: 16px;
+    }
+
+    .nutrition{
+        display: block;
+    }
+
+    .nutrition-chart{
+        margin-top: 32px;
+        margin-left: 0;
+    }
+
+    .nutrition-chart__contents{
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    .rader_result{
+        width: 300px !important;
+        height: 300px !important;
+    }
+
+    .meal{
+        width: calc(50% - 8px);
+    }
+
+    .meal:nth-child(3){
+        margin-left: 0px !important;
+        margin-top: 16px;
+    }
+
+    .meal:nth-child(4){
+        margin-top: 16px;
+    }
+
+    /* --------------- */
+    .global-nav p{
+        display: none;
+    }
+}
+
+
+

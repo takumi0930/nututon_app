@@ -1,0 +1,509 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+
+/* 変数 */
+:root{
+    --page-ground: #ccc;
+    --component-ground: #f0f0f0;
+    --green: #48D287;
+    --blue: #16a0ef;
+}
+
+/* reset CSS */
+body{
+    padding: 0;
+    margin: 0;
+    background: var(--page-ground);
+    min-width: 375px;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+h1, h2, h3, p, a{
+    font-size: 16px;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    color: #000;
+    text-decoration: none;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+input::placeholder{
+    color: var(--page-ground);
+}
+/* style */
+
+.primary-header{
+    width: 100%;
+    height: 88px;
+    display: flex;
+    background: var(--green);
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 2;
+}
+.primary-header div{
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.logo h1{
+    font-size: 20px;
+    color:#fff;
+    margin-left: 24px;
+    padding: 2px;
+    line-height: 28px;
+    font-family: 'Kosugi Maru', sans-serif;
+    white-space: pre-line;
+    text-align: center;
+    border: 1px solid #fff;
+    width: 100px;
+    transition: opacity .2s;
+
+}
+
+.logo:hover h1{
+    opacity: 0.7;
+}
+
+.page-title h1{
+    font-size: 28px;
+    font-weight: bold;
+    color:#fff;
+    text-align: center;
+}
+
+.header-nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-nav .meals-latest .st0{
+    fill:#fff;
+    transition: all 0.2s;
+}
+
+.header-nav .meals-latest:hover .st0{
+    fill:#16a0ef;
+}
+
+.header-nav .meals-latest.is-active .st0{
+    fill:#16a0ef;
+}
+
+.header-nav .calender i{
+    display: flex;
+    justify-content: flex-end;
+    color: #fff;
+    font-size: 40px;
+}
+
+.header-nav .calender i{
+    margin: 0 24px;
+    transition: color 0.2s;
+}
+
+.header-nav .calender i:hover{
+    color: #16a0ef;
+}
+
+.header-nav .calender.is-active i{
+    color: #16a0ef;
+}
+
+/* ------------------------------- */
+
+.progress-bar-container{
+    position: fixed;
+    margin-top: 88px;
+    width: 100%;
+    height: 88px;
+    background: #fff;
+}
+
+.progress-bar{
+    display: flex;
+    justify-content: space-around;
+}
+.progress-bar_item{
+    flex-basis: 0;
+    flex-grow: 1;
+    padding: 0 8px;
+}
+
+.progress-bar_item div{
+    content: "";
+    width: 100%;
+    height: 16px;
+    background: #ddd;
+    border-radius: 8px;
+    margin-top: 16px;
+}
+
+.progress-bar_item h2{
+    padding: 8px 0 16px 0;
+    text-align: center;
+}
+
+.top-magin{
+    content: "";
+    height: 88px;
+}
+
+/* --------------------------- */
+
+.back{
+    padding: 12px 0;
+}
+
+.back i{
+    color: #16a0ef;
+    font-size: 24px;
+}
+
+.back span{
+    color: #16a0ef;
+    line-height: 24px;
+    font-size: 20px;
+}
+
+.main-contents-container{
+    padding: 24px;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+
+
+.meals-container{
+    margin-top: 16px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 16px;
+    row-gap: 16px;
+}
+
+.recipe-search form{
+    position: relative;
+    max-width: 308px;
+    background: var(--component-ground);
+    padding: 4px;
+    height: 40px;
+    border-radius: 4px;
+}
+
+.recipe-search form input{
+    position: absolute;
+    top:8px;
+    left: 8px;
+    width: 250px;
+    height: 32px;
+    box-sizing: border-box;
+    border-radius: 16px 0 0 16px;
+    border: none;
+    padding: 0 16px;
+    background: var(--component-ground);
+    box-shadow: inset 3px 3px 6px #cccccc,
+    inset -3px -3px 6px #ffffff;
+    
+}
+
+.recipe-search form button{
+    position: absolute;
+    width: 50px;
+    height: 32px;
+    top:8px;
+    left: 258px;
+    box-sizing: border-box;
+    border-radius: 0 16px 16px 0;
+    border: none;
+    background: var(--blue);
+    color: #fff;
+    transition: transform 0.3s;
+}
+
+.recipe-search form input:focus{
+    border: none;
+    outline: none;
+}
+
+.recipe-search form button:hover{
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+/* -------------------------- */
+
+.recipe{
+    background: var(--component-ground);
+    padding: 16px;
+    border-radius: 16px;
+}
+
+.recipe-header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.recipe-contents{
+    display: flex;
+    margin-top: 8px;
+}
+
+.recipe-header{
+    display: flex;
+}
+
+.recipe-header h1{
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.recipe-header h1::before{
+    content: "";
+    width: 2px;
+    height: 36px;
+    background: var(--page-ground);
+    display:inline-block;
+    margin-right: 8px;
+    transform: translateY(4px);
+}
+
+.recipe-header a p{
+    font-size: 20px;
+    color: #16a0ef;
+    padding: 8px 0;
+}
+
+.recipe-header a p::after{
+    content: "";
+    background-image: url(../img/R.png);
+    margin-left: 8px;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    background-size: contain;
+    vertical-align: middle;
+}
+
+.recipe-header a:hover{
+    text-decoration: underline 1px #16a0ef;
+}
+
+.recipe-img{
+    flex-basis: 0;
+    flex-grow: 4;
+}
+
+.recipe-img img{
+    width:100%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.recipe-detail{
+    margin-left: 16px;
+    width: calc(60% - 9.6px);
+    padding: 16px;
+    border-radius: 16px;
+    box-sizing: border-box;
+    box-shadow: inset 3px 3px 6px #cccccc,
+    inset -3px -3px 6px #ffffff;
+    flex-basis: 0;
+    flex-grow: 6;
+
+}
+
+.section-title{
+    line-height: 24px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.calorie-data{
+    line-height: 32px;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: right;
+    margin-bottom: 4px;
+}
+
+.bar-container{
+    background-color: var(--component-ground);
+    box-shadow: inset 3px 3px 6px #cccccc,
+                inset -3px -3px 6px #ffffff;
+    width: 100%;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.bar-item{
+    background-color: #48D287;
+    width: 50%;
+    height: 20px;
+    border-radius: 10px;
+}
+
+.nutrition{
+    display: flex;
+    margin-top: 48px;
+}
+
+.nutrient{
+    flex-basis: 0;
+    flex-grow: 3;
+}
+
+.nutrition-chart{
+    flex-basis: 0;
+    flex-grow: 2;
+    margin-left: 24px;
+}
+
+.nutrient-container{
+    display: flex;
+    flex-wrap: wrap;
+    gap:16px;
+    margin-top: 16px;
+}
+
+.nutrition_item{
+    width: calc(50% - 8px);
+}
+
+.nutrition_item > h2{
+    font-size: 16px;
+    line-height: 16px;
+}
+
+.nutrition_item > h3{
+    text-align: right;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.bar-container_mediam{
+    background-color: var(--component-ground);
+    box-shadow: inset 3px 3px 6px #cccccc,
+                inset -3px -3px 6px #ffffff;
+    width: 100%;
+    height: 16px;
+    border-radius: 8px;
+}
+
+.bar-item_mediam{
+    background-color: #48D287;
+    width: 50%;
+    height: 16px;
+    border-radius: 8px;
+}
+
+.nutrition-chart__contents{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+}
+
+
+
+/* ---------------------------- */
+
+.global-nav{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 88px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(6px);
+}
+
+.global-nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 88px;
+}
+
+
+.global-nav li{
+    width: 200px;
+    transition: transform 0.3s;
+}
+
+.global-nav i{
+    font-size: 40px;
+    text-align: center;
+    display: block;
+}
+
+.global-nav p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.global-nav li:hover{
+    transform: scale(0.9);
+}
+
+.global-nav li:nth-child(2) i,
+.global-nav li:nth-child(2) p{
+    color: #16a0ef;
+}
+
+
+@media screen and (max-width:768px){
+
+    .page-title h1{
+        font-size: 20px;
+    }
+
+    /* ---------------- */
+
+    .meals-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .nutrition{
+        display: block;
+    }
+
+    .nutrition-chart{
+        margin-top: 32px;
+        margin-left: 0;
+    }
+
+    .nutrition-chart__contents{
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    .rader_result{
+        width: 300px !important;
+        height: 300px !important;
+    }
+    /* --------------- */
+    .global-nav p{
+        display: none;
+    }
+}
+
+
+

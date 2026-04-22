@@ -1,0 +1,539 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+
+/* 変数 */
+:root{
+    --page-ground: #ccc;
+    --component-ground: #f0f0f0;
+    --green: #48D287;
+}
+
+/* reset CSS */
+body{
+    padding: 0;
+    margin: 0;
+    background: var(--page-ground);
+    min-width: 375px;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+h1, h2, h3, p, a{
+    font-size: 16px;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    color: #000;
+    text-decoration: none;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+input::placeholder{
+    color: var(--page-ground);
+}
+
+/* style */
+
+.primary-header{
+    width: 100%;
+    height: 88px;
+    display: flex;
+    background: var(--green);
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+}
+.primary-header div{
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.logo h1{
+    font-size: 20px;
+    color:#fff;
+    margin-left: 24px;
+    padding: 2px;
+    line-height: 28px;
+    font-family: 'Kosugi Maru', sans-serif;
+    white-space: pre-line;
+    text-align: center;
+    border: 1px solid #fff;
+    width: 100px;
+    transition: opacity .2s;
+
+}
+
+.logo:hover h1{
+    opacity: 0.7;
+}
+
+.page-title h1{
+    font-size: 28px;
+    font-weight: bold;
+    color:#fff;
+    text-align: center;
+}
+
+.header-nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-nav .meals-latest .st0{
+    fill:#fff;
+    transition: all 0.2s;
+}
+
+.header-nav .meals-latest:hover .st0{
+    fill:#16a0ef;
+}
+
+.header-nav .meals-latest.is-active .st0{
+    fill:#16a0ef;
+}
+
+.header-nav .calender i{
+    display: flex;
+    justify-content: flex-end;
+    color: #fff;
+    font-size: 40px;
+}
+
+.header-nav .calender i{
+    margin: 0 24px;
+    transition: color 0.2s;
+}
+
+.header-nav .calender i:hover{
+    color: #16a0ef;
+}
+
+.header-nav .calender.is-active i{
+    color: #16a0ef;
+}
+
+/* ---------------------- */
+
+.top-magin{
+    content: "";
+    height: 88px;
+}
+
+/* --------------------------- */
+
+.main-contents-container{
+    padding: 24px;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.form-container{
+    margin-bottom: 24px;
+    padding: 16px;
+    z-index: 10;
+    background: var(--component-ground);
+    border-radius: 16px;
+}
+
+.form-title h1{
+    line-height: 48px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.green-bar{
+    content: "";
+    width: 350px;
+    height: 4px;
+    background: var(--green);
+    border-radius: 0 2px 2px 0;
+}
+
+/* ---------------------------------------- */
+
+/* 共通スタイル */
+.section-title h2{
+    font-size: 16px;
+    line-height: 32px;
+}
+
+.section-title p.required{
+    margin-left: 16px;
+    height: 20px;
+    padding: 0 12px;
+    font-size: 12px;
+    line-height: 20px;
+    background: #ff2e2e;
+    color: #fff;
+    border-radius: 12px;
+}
+
+
+.meal-name_container{
+    margin-top: 20px;
+    padding: 8px 16px 24px;
+    display: flex;
+}
+
+.meal-name_container input[type=text]{
+    background: var(--component-ground);
+    border: none;
+    outline: none;
+    box-shadow: inset 3px 3px 6px #cccccc,
+    inset -3px -3px 6px #ffffff;
+    height: 32px;
+    font-size: 20px;
+    padding: 0 8px;
+}
+
+
+.meal-like-button{
+    position: relative;
+}
+
+.meal-like-button input[type=checkbox] {
+    display: none;
+}
+
+.meal-like-button input[type=checkbox]+ label i{
+    font-size: 28px;
+    position: absolute;
+    left: 16px;
+    bottom: 0px;
+}
+
+.meal-like-button input[type=checkbox]:not(:checked)+ label i{
+    color: var(--page-ground);
+
+}
+
+.meal-like-button input[type=checkbox]:checked + label i{
+    color: #48D287;
+    
+}
+
+.meal-like-button input[type=checkbox]:not(:checked) + label i.bi-star-fill{
+    display: none;
+}
+
+.meal-like-button input[type=checkbox]:checked + label i.bi-star{
+    display: none;
+}
+
+.meal-like-button input[type=checkbox]:checked + label i.bi-star-fill{
+    transform: scale(1.1);
+    text-shadow: 1px 1px 2px #ccc;
+}
+
+.meal-like-button:hover input[type=checkbox]:not(:checked) + label i.bi-star{
+    color: #94ddb5;
+}
+
+
+
+/* ------------------------------ */
+
+.meal-img-container{
+    padding: 8px 16px 24px;
+}
+
+.section-title p.non-required{
+    margin-left: 16px;
+    height: 20px;
+    padding: 0 12px;
+    font-size: 12px;
+    line-height: 20px;
+    background: #15ABFF;
+    color: #fff;
+    border-radius: 12px;
+}
+
+.img-upload{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 320px;
+    height: 180px;
+    border-radius: 16px;
+    box-shadow: inset 3px 3px 6px #cccccc,
+    inset -3px -3px 6px #ffffff;
+    overflow: hidden;
+}
+
+.img-upload span{
+    font-size: 14px;
+    color: #ccc;
+}
+
+.meal-picture{
+    display: none;
+}
+
+/* ----------------------------------- */
+
+.meal-detail-container{
+    padding: 8px 16px 24px;
+}
+
+.meal-detail-select li{
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.meal-detail-select li+li{
+    margin-top: 16px;
+}
+
+.meal-detail-select label{
+    display: flex;
+
+}
+
+.meal-detail-select label h3{
+    font-size: 14px;
+    line-height: 32px;
+    width: 60px;
+}
+
+.meal-detail-select select{
+    appearance: none;
+    border-radius: 16px;
+    width: 180px;
+    padding: 0 16px;
+    background: var(--component-ground);
+    box-shadow: inset 3px 3px 6px #cccccc,
+    inset -3px -3px 6px #ffffff;
+    border: none;
+    cursor: pointer;
+    transition: box-shadow 0.5s;
+}
+
+.meal-detail-select li::before{
+    position: absolute;
+    top: 14px;
+    left: 216px;
+    width: 0;
+    height: 0;
+    padding: 0;
+    content: '';
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-top: 6px solid #000;
+    pointer-events: none;
+}
+
+.meal-detail-select select:focus{
+    outline: none;
+    box-shadow: inset 0px 0px 6px rgba(21, 171, 255, 1);
+}
+
+/* -------------------------- */
+
+.time-zone-container{
+    padding: 8px 16px;
+}
+
+.section-title{
+    display: flex;
+    align-items: center;
+    padding-bottom: 8px;
+}
+
+
+
+.time-zone input{
+    display: none;
+}
+
+.time-zone img{
+    width: 81px;
+    height: 28px;
+    opacity: 0.3;
+    transition: opacity 0.2s;
+}
+
+.time-zone input:checked + label > img{
+    opacity: 1;
+}
+
+.time-zone img:hover{
+    opacity: 0.5;
+}
+
+.price-container{
+    padding: 8px 16px 24px;
+}
+
+.price label{
+    display: flex;
+    align-items: center;
+}
+
+.price input{
+    background: var(--component-ground);
+    width: 100px;
+    height: 32px;
+    border-radius: 16px;
+    border: none;
+    box-shadow: inset 3px 3px 6px #cccccc,
+    inset -3px -3px 6px #ffffff;
+    padding: 0 16px;
+    text-align: right;
+    font-size: 20px;
+    line-height: 32px;
+}
+
+.price input:focus{
+    outline: none;
+}
+
+.price input + p{
+    font-size: 16px;
+    line-height: 24px;
+    margin-left: 8px;
+}
+
+
+/* ----------------------- */
+
+
+.button-container{
+    display: flex;
+    justify-content: flex-start;
+}
+
+.next-button{
+    margin-bottom: 24px;
+    width: 160px;
+    height: 48px;
+    border-radius: 24px;
+    border: none;
+    background: linear-gradient(0deg, #1580ff, #15ABFF);
+}
+
+.next-button > p{
+    color:#fff;
+    line-height: 48px;
+    font-size: 24px;
+}
+
+.next-button:hover{
+    opacity: 0.8;
+}
+/* ---------------------------- */
+
+.global-nav{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 88px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(6px);
+}
+
+.global-nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 88px;
+}
+
+.global-nav li{
+    width: 200px;
+    transition: transform 0.3s;
+}
+
+.global-nav i{
+    font-size: 40px;
+    text-align: center;
+    display: block;
+}
+
+.global-nav p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.global-nav li:hover{
+    transform: scale(0.9);
+}
+
+.global-nav li:nth-child(4) i,
+.global-nav li:nth-child(4) p{
+    color: #16a0ef;
+}
+
+@media screen and (max-width:768px){
+    
+    .page-title h1{
+        font-size: 20px;
+    }
+
+    /* ---------------- */
+    .top{
+        display: block;
+    }
+
+    .top-left, .top-right{
+        width: 100%;
+    }
+
+    .top-right{
+        margin-left: 0px;
+        margin-top: 16px;
+    }
+
+    .nutrition{
+        display: block;
+    }
+
+    .nutrition-chart{
+        margin-top: 32px;
+        margin-left: 0;
+    }
+
+    .nutrition-chart__contents{
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    .rader_result{
+        width: 300px !important;
+        height: 300px !important;
+    }
+
+    .meal{
+        width: calc(50% - 8px);
+    }
+
+    .meal:nth-child(3){
+        margin-left: 0px !important;
+        margin-top: 16px;
+    }
+
+    .meal:nth-child(4){
+        margin-top: 16px;
+    }
+
+    .button-container{
+        justify-content: flex-end;
+    }
+
+    /* --------------- */
+    .global-nav p{
+        display: none;
+    }
+}

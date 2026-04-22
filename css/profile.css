@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&display=swap');
+
+/* 変数 */
+:root{
+    --page-ground: #ccc;
+    --component-ground: #f0f0f0;
+    --green: #48D287;
+    --blue: #16a0ef;
+}
+
+/* reset CSS */
+body{
+    padding: 0;
+    margin: 0;
+    background: var(--page-ground);
+    min-width: 375px;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+h1, h2, h3, p, a{
+    font-size: 16px;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+    color: #000;
+    text-decoration: none;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+li{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+
+input::placeholder{
+    color: var(--page-ground);
+}
+
+/* style */
+
+.primary-header{
+    width: 100%;
+    height: 88px;
+    display: flex;
+    background: var(--green);
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    z-index: 10;
+}
+.primary-header div{
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.logo h1{
+    font-size: 20px;
+    color:#fff;
+    margin-left: 24px;
+    padding: 2px;
+    line-height: 28px;
+    font-family: 'Kosugi Maru', sans-serif;
+    white-space: pre-line;
+    text-align: center;
+    border: 1px solid #fff;
+    width: 100px;
+    transition: opacity .2s;
+
+}
+
+.logo:hover h1{
+    opacity: 0.7;
+}
+
+.page-title h1{
+    font-size: 28px;
+    font-weight: bold;
+    color:#fff;
+    text-align: center;
+}
+
+.header-nav{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-nav .meals-latest .st0{
+    fill:#fff;
+    transition: all 0.2s;
+}
+
+.header-nav .meals-latest:hover .st0{
+    fill:#16a0ef;
+}
+
+.header-nav .meals-latest.is-active .st0{
+    fill:#16a0ef;
+}
+
+.header-nav .calender i{
+    display: flex;
+    justify-content: flex-end;
+    color: #fff;
+    font-size: 40px;
+}
+
+.header-nav .calender i{
+    margin: 0 24px;
+    transition: color 0.2s;
+}
+
+.header-nav .calender i:hover{
+    color: #16a0ef;
+}
+
+.header-nav .calender.is-active i{
+    color: #16a0ef;
+}
+
+/* ---------------------- */
+
+.top-magin{
+    content: "";
+    height: 88px;
+}
+
+/* --------------------------- */
+
+.contents-container{
+    padding: 24px;
+    margin: 0 auto;
+    max-width: 1280px;
+}
+
+.form-container{
+    flex-basis: 0;
+    flex-grow: 1;
+    margin-top: 16px;
+    padding: 16px;
+    background: var(--component-ground);
+    border-radius: 16px;
+}
+
+.form-container.logout{
+    background: none;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+
+.form-container + .form-container{
+    margin-left: 16px;
+}
+
+.form-title{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-title h1{
+    line-height: 48px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.form-title a{
+    line-height: 48px;
+    font-size: 16px;
+    color: var(--blue);
+}
+
+.form-title a:hover{
+    text-decoration: underline solid var(--blue) 1px;
+}
+
+
+.green-bar{
+    content: "";
+    width: 60%;
+    height: 4px;
+    background: var(--green);
+    border-radius: 0 2px 2px 0;
+    transition: width 0.3s;
+}
+
+.form-title:hover + .green-bar{
+    width: 80%;
+}
+
+/* ---------------------------------------- */
+
+.account-container{
+    display: flex;
+}
+
+.account-container div:nth-child(2){
+    margin-left: 16px;
+    padding-left: 16px; 
+}
+
+.form-container > .form-title + .green-bar{
+    margin: 0;
+}
+
+.account li{
+    outline: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+}
+
+.account li:first-child{
+    margin-top: 20px;
+}
+
+.account li div:first-child{
+    display: flex;
+    align-items: center;
+}
+
+.account li i{
+    font-size: 24px;
+}
+
+
+.account li h2{
+    line-height: 28px;
+    font-size: 16px;
+    margin-left: 8px;
+    width: 120px;
+}
+
+.account li p{
+    line-height: 28px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.logout a{
+    background: var(--component-ground);
+    display: flex;
+    align-items: center;
+    border-radius: 16px;
+    padding: 10px 16px;
+    width: 160px;
+}
+
+.logout a div{
+    width: 44px;
+    height: 44px;
+    background: var(--component-ground);
+    border-radius: 50%;
+    box-shadow: 2px 2px 3px #666;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.3s;
+}
+
+.logout a i{
+    color: #ff2e2e;
+    width: 32px;
+    height: 32px;
+    font-size: 32px;
+    transform: translateX(4px);
+}
+
+.logout a p{
+    color: #ff2e2e;
+    font-size: 20px;
+    margin-left: 16px;
+}
+
+.logout a:hover div{
+    transform: translateX(-4px);
+}
+
+.user-info{
+    display: flex;
+}
+
+.basic-info li{
+    outline: 1px solid #ccc;
+    display: flex;
+    align-items: center;
+    padding: 16px;
+}
+
+.basic-info li:first-child{
+    margin-top: 20px;
+}
+
+.basic-info li h2{
+    width: 120px;
+}
+
+.basic-info li p{
+    font-weight: bold;
+}
+
+
+
+/* ---------------------------- */
+
+.global-nav{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 88px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(6px);
+}
+
+.global-nav ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 88px;
+}
+
+.global-nav li{
+    width: 200px;
+    transition: transform 0.3s;
+}
+
+.global-nav i{
+    font-size: 40px;
+    text-align: center;
+    display: block;
+}
+
+.global-nav p{
+    font-size: 20px;
+    text-align: center;
+}
+
+.global-nav li:hover{
+    transform: scale(0.9);
+}
+
+.global-nav li:nth-child(5) i,
+.global-nav li:nth-child(5) p{
+    color: #16a0ef;
+}
+
+@media screen and (max-width:768px){
+
+    
+    .page-title h1{
+        font-size: 20px;
+    }
+
+    /* ---------------- */
+    .top{
+        display: block;
+    }
+
+    .top-left, .top-right{
+        width: 100%;
+    }
+
+    .top-right{
+        margin-left: 0px;
+        margin-top: 16px;
+    }
+
+    .nutrition{
+        display: block;
+    }
+
+    .nutrition-chart{
+        margin-top: 32px;
+        margin-left: 0;
+    }
+
+    .nutrition-chart__contents{
+        width: 300px;
+        height: 300px;
+        margin: 0 auto;
+    }
+
+    .rader_result{
+        width: 300px !important;
+        height: 300px !important;
+    }
+
+    .meal{
+        width: calc(50% - 8px);
+    }
+
+    .meal:nth-child(3){
+        margin-left: 0px !important;
+        margin-top: 16px;
+    }
+
+    .meal:nth-child(4){
+        margin-top: 16px;
+    }
+
+
+    .account-container{
+        flex-direction: column-reverse;
+    }
+
+    .user-info{
+        flex-direction: column;
+    }
+
+    .form-container + .form-container{
+        margin-left: 0;
+    }
+    /* --------------- */
+    .global-nav p{
+        display: none;
+    }
+}
