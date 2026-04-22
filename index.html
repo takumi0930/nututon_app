@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <link rel="icon" href="img/favicon.svg">
+    <title>ログイン - 栄養管理アプリ</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="login_left">
+            <h1>1人暮らし向け
+                栄養教育・食生活管理アプリ
+            </h1>
+            <img src="img/nadine-primeau--ftWfohtjNw-unsplash.jpg" alt="">
+            <div class="login-left_text-ground"></div>
+        </div>
+        <div class="login_right">
+            <div class="login_right_inner">
+                <div class="login_right_header">
+                    <h2>login</h2>
+                    <div class="cross-bar"></div>
+                </div>
+                <div class="login-form-container">
+                    <form action="" method="post">
+                        <div class="login-youerid_container">
+                            <i class="bi bi-person-circle"></i>
+                            <label for="user_id">ユーザーID</label>
+                            <div class="input-and-gauge">
+                                <input type="text" id="user_id" name="user_id">
+                                <div class="gauge">
+                                    <div class="gauge-circle"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="login-password_container">
+                            <i class="bi bi-lock"></i>
+                            <label for="password">パスワード</label>
+                            <div class="input-and-gauge">
+                                <input type="password" id="password" name="password">
+                                <div class="gauge">
+                                    <div class="gauge-circle"></div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="login-action">
+                            <input type="button" onclick="location.href='top-page.html'" value="ログインする">
+                        </div>
+                    </form>
+                </div>
+                <p>または</p>
+                <div class="create-account">
+                    <form action="account_create1.html">
+                        <input type="submit" value="アカウントを作る">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

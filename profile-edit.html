@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="jp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/profile-edit.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.0/font/bootstrap-icons.css">
+    <link rel="icon" href="img/favicon.svg">
+    <title>プロフィール - 栄養管理アプリ</title>
+</head>
+
+<body>
+    <header class="primary-header">
+        <div class="logo">
+            <a href="top-page.html">
+                <h1>栄養管理
+                    アプリ
+                </h1>
+            </a>
+        </div>
+        <div class="page-title">
+           <h1>プロフィール</h1> 
+        </div> 
+        
+        <div class="header-nav">
+            <a href="meals-latest.html">
+                <div class="meals-latest">
+                    <svg version="1.1" id="_x32_" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="512px" height="512px" viewBox="0 0 512 512" style="width: 40px; height: 40px; opacity: 1;" xml:space="preserve">
+                    <style type="text/css">.st0{fill:#4B4B4B;}</style>
+                        <g>
+                            <path class="st0" d="M207.103,23.875v109.219c0,7-5.656,12.641-12.625,12.641h-3.375c-6.969,0-12.641-5.641-12.641-12.641V23.375
+                                c0-18-12.109-23.375-23.719-23.375s-23.719,5.375-23.719,23.375v109.719c0,7-5.672,12.641-12.641,12.641h-3.375
+                                c-6.969,0-12.625-5.641-12.625-12.641V23.875c0-32.219-45.938-31.125-45.938,0.359c0,37.703,0,104.297,0,104.297
+                                c-0.219,57.906,13.625,72.953,36.469,91c18.422,14.531,34.156,22.859,34.156,58.953v232.188h55.344V278.484
+                                c0-36.094,15.734-44.422,34.156-58.953c22.859-18.047,36.688-33.094,36.469-91c0,0,0-66.594,0-104.297
+                                C253.04-7.25,207.103-8.344,207.103,23.875z">
+                            </path>
+                            <path class="st0" d="M385.228,34.75c-11.75,32.953-45.578,110.156-47.719,178.344c-3.313,105.844,61.547,90.188,62.703,159.531
+                                v138.688h55.078l0.266,0.688c0,0,0-0.281,0-0.688c0-9.266,0-119.625,0-232.203c0-111.359,0-224.797,0-244.359
+                                C455.556-5.438,403.524-16.531,385.228,34.75z">
+                            </path>
+                        </g>
+                    </svg>
+                </div>
+                
+            </a>
+            <a class="calender" href="meal-calender1.html"><i class="bi bi-calendar3"></i> </a>
+        </div>
+    </header>
+
+    <div class="top-magin"></div>
+
+    <div class="contents-container">
+        <section class="account-container">
+            <div class="form-container">
+                <div class="form-title">
+                    <h1>アカウント</h1>
+                </div>
+                <div class="green-bar"></div>
+        
+                <div class="account">
+                    <ul>
+                        <li>
+                            <div>
+                                <i class="bi bi-person-circle"></i>
+                                <h2>ユーザーID</h2>
+                            </div>
+                            <div>
+                                <p>Ibaraki2022</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div>
+                                <i class="bi bi-lock"></i>
+                                <h2>パスワード</h2>
+                            </div>
+                            <div>
+                                <p>************</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div  class="form-container logout">
+                <div>
+                    <a href="index.html">
+                        <div>
+                            <i class="bi bi-box-arrow-in-left"></i>
+                        </div>
+                        <p>ログアウト</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+    
+        <section class="user-info">
+            <div class="form-container">
+                <div class="form-title">
+                    <h1>基本情報</h1>
+                    <button onclick="location.href='profile.html'">編集を完了する</button>
+                </div>
+                <div class="green-bar"></div>
+        
+                <div class="basic-info">
+
+                    <form action="" method="post">
+
+                        <div class="birthday_container">
+                            <h2>生年月日</h2>
+                            <div class="birthday">
+                                <input type="text" id="birth_year" name="birth_year" value="2001">
+                                <span>年</span>
+                                <input type="text" id="birth_month" name="birth_month" value="11">
+                                <span>月</span>
+                                <input type="text" id="birth_day" name="birth_day" value="30">
+                                <span>日</span>
+                            </div>
+                        </div>
+            
+                        <div class="sex_container">
+                            <h2>性別</h2>
+                            <div class="sex-radio">
+                            
+                                <input type="radio" name="sex" id="sex-male" value="male" checked>
+                                <label for="sex-male">男性</label>
+
+                            
+                                <input type="radio" name="sex" id="sex-female" value="female">
+                                <label for="sex-female">女性</label>
+
+                                <input type="radio" name="sex" id="sex-other" value="other">
+                                <label for="sex-other">その他</label>
+
+                       
+                                <input type="radio" name="sex" id="sex-unknown" value="unknown">
+                                <label for="sex-unknown">回答しない</label>
+                            </div>
+                        </div>
+            
+                        <div class="height_container">
+                            <h2>身長</h2>
+                            <div class="height">
+                                <input type="text" name="height" id="height" value="173.5">
+                                <span>cm</span>
+                            </div>
+                        </div>
+            
+                        <div class="weight_container">
+                            <h2>体重</h2>
+                            <div class="weight">
+                                <input type="text" name="weight" id="weight" value="64.7">
+                                <span>kg</span>
+                            </div>
+                        </div>
+            
+                        <div class="exercise-intensity_container">
+                            <h2>運動強度</h2>
+                            <div>                            
+                                    <input type="radio" name="exercise-intensity" value="1" id="exercise-intensity-1" checked>
+                                    <label for="exercise-intensity-1">1: 毎日座っているような生活</label>
+ 
+                            </div>
+                            <div>
+                                <label>
+                                    <input type="radio" name="exercise-intensity" value="2" id="exercise-intensity-2">
+                                    <label for="exercise-intensity-2">2: 階段の上り下りや補講をする生活</label>
+                                    
+                                </label>
+                            </div>
+                            <div>
+                                <label>
+                                    <input type="radio" name="exercise-intensity" value="3" id="exercise-intensity-3">
+                                    <label for="exercise-intensity-3">3: スポーツを日々行っている生活</label>
+                                </label>
+                            </div>
+                        </div>
+            
+                        <div class="purpose-container">
+                            <div>
+                                <h2>本アプリの利用目的</h2>
+                                <span>(あなたの食設計のために行います)</span>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="purpose" value="1" id="purpose-1" checked>    
+                                <label for="purpose-1">栄養状態の把握のため</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="purpose" value="2" id="purpose-2">
+                                <label for="purpose-2">ダイエットのため</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" name="purpose" value="3" id="purpose-3">
+                                <label for="purpose-3">筋力トレーニングのため</label>
+                                
+                            </div>
+                        </div>
+            
+                    </form>
+ 
+                </div>
+            </div>
+        
+            <div class="form-container">
+                <div class="form-title">
+                    <h1>食に関する情報</h1>
+                    <button onclick="location.href='profile.html'">編集を完了する</button>
+                </div>
+                <div class="green-bar"></div>
+        
+                <div class="basic-info">
+
+                    <div class="favorite-foods-container">
+                        <label for="favorite-foods">
+                            <span>好きな食べ物</span>
+                        </label>
+                        <textarea name="favorite-foods" id="" cols="30" rows="10">たまご&#13;&#10;豆腐&#13;&#10;牛肉</textarea>
+                    </div>
+            
+                    <div class="disliked-foods-container">
+                        <label for="disliked-foods">
+                            <span>嫌いな食べ物</span>
+                        </label>
+                        <textarea name="disliked-foods" id="" cols="30" rows="10">貝類&#13;&#10;甲殻類</textarea>
+                    </div>
+            
+                    <div class="allergy-container">
+                        <h2>アレルギー</h2>
+                        <ul>
+                            <li>
+                                <select name="allergy1" id="allergy1">
+                                    <option value="0">------</option>
+                                    <option value="卵">卵</option>
+                                    <option value="乳">乳</option>
+                                    <option value="小麦">小麦</option>
+                                    <option value="えび" selected>えび</option>
+                                    <option value="かに">かに</option>
+                                    <option value="落花生">落花生</option>
+                                    <option value="そば">そば</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select name="allergy2" id="allergy2">
+                                    <option value="0">------</option>
+                                    <option value="卵">卵</option>
+                                    <option value="乳">乳</option>
+                                    <option value="小麦">小麦</option>
+                                    <option value="えび">えび</option>
+                                    <option value="かに">かに</option>
+                                    <option value="落花生" selected>落花生</option>
+                                    <option value="そば">そば</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select name="allergy3" id="allergy3">
+                                    <option value="0" selected>------</option>
+                                    <option value="卵">卵</option>
+                                    <option value="乳">乳</option>
+                                    <option value="小麦">小麦</option>
+                                    <option value="えび">えび</option>
+                                    <option value="かに">かに</option>
+                                    <option value="落花生">落花生</option>
+                                    <option value="そば">そば</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select name="allergy4" id="allergy4">
+                                    <option value="0" selected>------</option>
+                                    <option value="卵">卵</option>
+                                    <option value="乳">乳</option>
+                                    <option value="小麦">小麦</option>
+                                    <option value="えび">えび</option>
+                                    <option value="かに">かに</option>
+                                    <option value="落花生">落花生</option>
+                                    <option value="そば">そば</option>
+                                </select>
+                            </li>
+                            <li>
+                                <select name="allergy5" id="allergy5">
+                                    <option value="0" selected>------</option>
+                                    <option value="卵">卵</option>
+                                    <option value="乳">乳</option>
+                                    <option value="小麦">小麦</option>
+                                    <option value="えび">えび</option>
+                                    <option value="かに">かに</option>
+                                    <option value="落花生">落花生</option>
+                                    <option value="そば">そば</option>
+                                </select>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+    <div class="top-magin"></div>
+    
+    <nav class="global-nav">
+        <ul>
+            <li><a href="nutrition-learn1.html"><i class="bi bi-book"></i><p>栄養学習</p></a></li>
+            <li><a href="recipe-search.html"><i class="bi bi-search"></i><p>レシピ検索</p></a></li>
+            <li><a href="top-page.html"><i class="bi bi-house-fill"></i><p>ホーム</p></a></li>
+            <li><a href="meal-register.html"><i class="bi bi-plus-circle"></i><p>新規食事記録</p></a></li>
+            <li><a href="profile.html"><i class="bi bi-person-circle"></i><p>プロフィール</p></a></li>
+        </ul>
+    </nav>
+
+</body>
