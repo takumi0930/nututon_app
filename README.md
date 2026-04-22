@@ -4,6 +4,9 @@
 ## アクセス方法
 https://takumi0930.github.io/nututon_app/
 
+## ホーム画面
+![sample](./img/nututon-app-top-page_screenshot.png)
+
 ## 機能
 - アカウント作成
 - ログイン・ログアウト
